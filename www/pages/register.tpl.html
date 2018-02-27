@@ -1,0 +1,43 @@
+<div class="login-body">
+    <div class="container">
+        <h4 class="center">注册</h4>
+        <form class="login-form" ng-submit="registerForm()">
+            <div class="row input-field middle">
+                <input type="text" class="col s9" id="username" ng-model="user.username" ng-keyup="checkName()" required />
+                <label for="username">用户名：</label>
+                <p class="prompt" ng-show="isOk">用户名已存在</p>
+            </div>
+            <div class="row input-field middle">
+                <input type="password" class="col s9" id="userpass" ng-model="user.userpass" required />
+                <label for="userpass">密码：</label>
+            </div>
+            <div class="row input-field middle">
+                <input type="password" class="col s9" id="againpass" ng-model="user.againpass" required />
+                <label for="againpass">确认密码：</label>
+            </div>
+            <div class="row input-field middle">
+                <input type="text" class="col s9" id="phone" ng-model="user.acountNumber" required />
+                <label for="phone">手机号：</label>
+            </div>
+            <div class="row input-field middle">
+                <h6>省：</h6>
+                <select id="pro" class="col s9" ng-model="user.pro">
+
+                </select>
+            </div>
+            <div class="row input-field middle">
+                <h6>市(区)：</h6>
+                <select id="city" class="col s9" ng-model="user.city">
+
+                </select>
+            </div>
+
+            <div class="center">
+                <input type="submit" class="btn" value="确定">
+                <input type="reset" class="btn" value="重置">
+            </div>
+        </form>
+        <button class="test">测试</button>
+    </div>
+</div>
+

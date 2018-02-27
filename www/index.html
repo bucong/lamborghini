@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="webApp">
+<head>
+    <meta charset="UTF-8">
+    <title>兰博基尼</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./components/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./components/materialize/dist/css/materialize.min.css"/>
+    <link rel="stylesheet" href="./components/animate/dist/css/animate.min.css"/>
+    <!--页面css-->
+    <link rel="stylesheet" href="./css/public.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="nav-wrapper">
+                <a ng-href="#/home" class="logo">
+                    <img src="./images/logo.png" width="46px" alt="logo">
+                    兰博基尼
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ng-href="#/home">首页</a></li>
+                    <li><a ng-href="#/models">车型</a></li>
+                    <li><a ng-href="#/brand">品牌</a></li>
+                    <li><a ng-href="#/owner">车主服务</a></li>
+                    <li><a ng-href="#/experience">体验</a></li>
+                    <li><a ng-href="#/store">试驾</a></li>
+                    <li class="login">
+                        <a ng-href="#/login" ng-show="alreadyLogin">登录/</a>
+                        <a ng-href="#/register" ng-show="alreadyLogin">注册</a>
+                        <a ng-href="#/login" ng-hide="alreadyLogin"><span>{{showname}}</span>&nbsp;<lable class="fa fa-times-circle"></lable></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="fa fa-chevron-up toTop"></div>
+    <div ng-view class="body"></div>
+    <footer>
+        <nav class="footer-nav">
+            <ul class="container">
+                <li><a href="javascript:void(0)">公司</a></li>
+                <li><a href="javascript:void(0)">职业发展</a></li>
+                <li><a href="javascript:void(0)">联系我们</a></li>
+                <li><a href="javascript:void(0)">媒体中心</a></li>
+                <li><a href="javascript:void(0)">隐私政策</a></li>
+                <li><a href="javascript:void(0)">网站地图</a></li>
+                <li><a href="javascript:void(0)">电子简报</a></li>
+                <li><a href="javascript:void(0)">商店</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row nav wow fadeInDown animated" data-wow-duration="1s" data-wow-delay=".6s">
+                <div class="col m3 s12">
+                    <p>车型</p>
+                    <ul>
+                        <li><a href="javascript:void(0)">Huracán</a></li>
+                        <li><a href="javascript:void(0)">Aventador</a></li>
+                        <li><a href="javascript:void(0)">限量版型号</a></li>
+                        <li><a href="javascript:void(0)">概念车</a></li>
+                        <li><a href="javascript:void(0)">Ad Personam高级个性化方案</a></li>
+                    </ul>
+                </div>
+                <div class="col m3 s12">
+                    <p>品牌</p>
+                    <ul>
+                        <li><a href="javascript:void(0)">人物</a></li>
+                        <li><a href="javascript:void(0)">历史</a></li>
+                        <li><a href="javascript:void(0)">杰作</a></li>
+                        <li><a href="javascript:void(0)">设计</a></li>
+                        <li><a href="javascript:void(0)">Forged Composites® 碳纤维</a></li>
+                    </ul>
+                </div>
+                <div class="col m3 s12">
+                    <p>车主服务</p>
+                    <ul>
+                        <li><a href="javascript:void(0)">易手车定位器</a></li>
+                        <li><a href="javascript:void(0)">原装辅件</a></li>
+                        <li><a href="javascript:void(0)">零配件</a></li>
+                        <li><a href="javascript:void(0)">客户服务</a></li>
+                        <li><a href="javascript:void(0)">Polo Storico修复中心</a></li>
+                    </ul>
+                </div>
+                <div class="col m3 s12">
+                    <p>体验</p>
+                    <ul>
+                        <li><a href="javascript:void(0)">博物馆</a></li>
+                        <li><a href="javascript:void(0)">Esperienza驾驶体验活动</a></li>
+                        <li><a href="javascript:void(0)">Accademia驾驶学院</a></li>
+                        <li><a href="javascript:void(0)">活动</a></li>
+                        <li><a href="javascript:void(0)">移动APP</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center ind-about">
+                <span>关注我们</span>
+                <a href="http://www.weibo.com/lamborghinichina" class="fa fa-weibo" target="_blank"></a>
+                <a href="http://i.youku.com/i/UMjg0MDg1ODMy" class="fa fa-youtube-play" target="_blank"></a>
+                <a href="https://www.lamborghini.com/cn-en/wechat" class="fa fa-weixin" target="_blank"></a>
+            </div>
+        </div>
+        <p class="center copyright">©2016 年兰博基尼汽车有限公司版权所有。兰博基尼汽车有限公司是一家隶属奥迪集团的单一股东公司。保留所有权利。增值税号码：IT 00591801204 </p>
+    </footer>
+    <script src="./components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="./components/angular/angular.min.js" type="text/javascript"></script>
+    <script src="./components/angular-route/angular-route.min.js" type="text/javascript"></script>
+    <script src="./components/lazyload/jquery.lazyload.min.js" type="text/javascript"></script>
+    <script src="./components/materialize/dist/js/materialize.min.js" type="text/javascript"></script>
+    <script src="./components/animate/dist/js/wow.min.js" type="text/javascript"></script>
+    <script src="./js/echarts.common.min.js"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/controller.js" type="text/javascript"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
+</body>
+</html>

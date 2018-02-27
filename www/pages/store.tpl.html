@@ -1,0 +1,47 @@
+<article class="store container">
+    <section class="row">
+        <div class="input-field col s6 offset-s3">
+            <input type="text" id="search" ng-model="search" />
+            <label for="search">关键词搜索：</label>
+        </div>
+
+        <div class="input-field col s6 offset-s3">
+            <select class="form-control select" ng-model="orderField"
+                    ng-options="item.orderType as item.name for item in orderTypeList">
+                <option value="">---请选择排序字段---</option>
+            </select>
+        </div>
+        <div class="col s6 offset-s3">
+            <input class="with-gap" type="radio" name="order" ng-value="false" ng-model="isDesc" id="desc1" />
+            <label for="desc1">升序</label>
+        </div>
+        <div class="col s6 offset-s3">
+            <input class="with-gap" type="radio" name="order" ng-value="true" ng-model="isDesc" id="desc2" />
+            <label for="desc2">降序</label>
+        </div>
+    </section>
+    <div class="row">
+        <ul class="col s10 offset-s1" ng-repeat="item in carList|orderBy:orderField:isDesc|filter:{'$':search}">
+            <li class="store-img wow fadeInDown animated" data-wow-duration="1s" data-wow-delay=".6s">
+                <figure>
+                    <div class="fl">
+                        <img src="./images/car{{ item.id }}-1.jpg" width="204px" height="136px" alt="img">
+                        <img src="./images/car{{ item.id }}-2.jpg" width="100px" height="66px" alt="img">
+                        <img src="./images/car{{ item.id }}-3.jpg" width="100px" height="66px" alt="img">
+                    </div>
+                    <figcaption class="fl">
+                        <h5>{{ item.name }}</h5>
+                        <h6>报价：{{ item.price }}万</h6>
+                        <p><span>排量：</span>{{ item.displacement }}L</p>
+                        <p><span>油耗：</span>{{ item.oil }}L</p>
+                        <p><span>变速箱：</span>{{ item.speed }}</p>
+                        <p><span>车身：</span>{{ item.car }}</p>
+                        <button class="btn waves-effect waves-light store-love" type="button" onclick="Materialize.toast('收藏成功！', 4000)" name="action">收藏({{ item.loveNum }})</button>
+                        <a ng-href="#/trySub?id={{ item.id }}" class="btn waves-effect waves-light show-storemeng" name="action">预约试驾</a>
+                        <a ng-href="#/detail" class="btn waves-effect waves-light goDetail" type="button" name="action">详情</a>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+</article>

@@ -1,0 +1,12 @@
+.blod {
+  font-weight: bold;
+}
+@font-face {
+  font-family: myfont;
+  src: url('../components/materialize/fonts/roboto/Roboto-Medium.eot');
+  src: url('../components/materialize/fonts/roboto/Roboto-Medium.ttf');
+  /*.eot格式是IE9专用的字体格式*/
+}
+* {
+  font-family: myfont;
+}

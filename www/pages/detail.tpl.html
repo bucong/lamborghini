@@ -1,0 +1,50 @@
+<section class="row chart-show">
+    <div id="main" class="col s9" style="width: 800px; height: 500px;margin: 0 auto"></div>
+    <div class="input-field selectBox col s2">
+        <select id="selectChart">
+            <option value="0">2015款 LP 750-4 Superveloce</option>
+            <option value="1">2013款 LP 700-4 Roadster</option>
+            <option value="2">2011款 LP700-4</option>
+            <option value="3">2017款 LP580-2 敞篷版</option>
+            <option value="4">2015款 LP600-4 中</option>
+            <option value="5">2014款 LP610-4</option>
+            <option value="6">2017款 基本型</option>
+            <option value="7">Roadster</option>
+            <option value="8">LP770-4</option>
+            <option value="9">2013款 基本型</option>
+            <option value="10">Concept</option>
+            <option value="11">LPI 910-4 concept</option>
+            <option value="12">2013款 Concept</option>
+            <option value="13">2013款 LP 700-5 Roadste</option>
+        </select>
+    </div>
+
+</section>
+<article>
+    <table class="striped detail-tab">
+        <tr>
+            <th>名称</th>
+            <th>报价</th>
+            <th>油耗</th>
+            <th>变速箱</th>
+            <th>车身</th>
+            <th>轴距</th>
+            <th>质量</th>
+            <th>最高车速</th>
+            <th>气缸数</th>
+            <th>结构</th>
+        </tr>
+        <tr ng-repeat="item in carList">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.oil }}</td>
+            <td>{{ item.speed }}</td>
+            <td>{{ item.car }}</td>
+            <td>{{ item.distance }}</td>
+            <td>{{ item.weight }}</td>
+            <td>{{ item.maxspeed }}</td>
+            <td>{{ item.cylinder }}</td>
+            <td>{{ item.structure }}</td>
+        </tr>
+    </table>
+</article>

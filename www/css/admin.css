@@ -1,0 +1,91 @@
+header {
+  height: 60px;
+  background: #313338;
+  line-height: 60px;
+}
+header a {
+  display: inline-block;
+  height: 60px;
+  margin-left: 20px;
+  line-height: 60px !important;
+  font-size: 30px !important;
+  padding-right: 20px;
+  border-right: 1px solid #ddd;
+  color: #fff;
+}
+header span {
+  display: inline-block;
+  margin-left: 50px;
+  line-height: 60px;
+  font-size: 30px;
+  color: #fff;
+}
+header p {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #fff;
+}
+.row {
+  margin: 0;
+}
+.admin-left {
+  padding: 0 !important;
+  height: 600px;
+  background: url("../images/black-bg.jpg");
+  overflow: hidden;
+}
+.admin-left a {
+  margin: 5px 0;
+  padding-left: 20px;
+  display: block;
+  height: 50px;
+  width: 300px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #fff;
+}
+.admin-left a:hover {
+  background: #21C0C0;
+}
+.admin-left .a-active {
+  background: #21C0C0;
+}
+.admin-right {
+  height: 600px;
+  overflow: auto;
+}
+.admin-right .admin-tab th,
+.admin-right .admin-tab td {
+  width: 150px;
+}
+.edit-btn {
+  padding: 0 10px;
+}
+.admin-right::-webkit-scrollbar {
+  display: none;
+}
+.edit-tab td,
+.edit-tab th {
+  padding: 0 20px;
+  height: 66px;
+}
+.edit-tab tr {
+  width: 60%;
+  margin: 0 auto;
+}
+.edit-tab td:nth-child(1) {
+  font-size: 20px;
+  width: 160px;
+}
+.edit-tab td:nth-child(2) {
+  width: 400px;
+}
+.edit-tab .btn {
+  margin: 0 30px;
+}
+select {
+  display: block;
+}
+.edit-sub {
+  width: 560px !important;
+}

@@ -1,0 +1,30 @@
+<div class="login-body">
+    <div class="container">
+        <h4 class="center">登录</h4>
+        <form class="login-form" ng-submit="loginForm()">
+            <div class="row input-field middle">
+                <input type="text" class="col s9" id="username" ng-model="user.username" required />
+                <label for="username">用户名：</label>
+            </div>
+            <div class="row input-field middle">
+                <input type="password" class="col s9" id="userpass" ng-model="user.userpass" required />
+                <label for="userpass">密码：</label>
+            </div>
+            <div class="row input-field middle">
+                <input type="text" class="col s9" id="check" value="" required />
+                <label for="check">验证码：</label>
+                <canvas id="canvas" width="150" height="50"></canvas>
+            </div>
+            <div class="input-field middle login-authority">
+                <input class="with-gap" ng-model="user.authority" type="radio" value="user" id="authority1" />
+                <label for="authority1">用户登录</label>
+                <input class="with-gap" ng-model="user.authority" type="radio" value="admin" id="authority2"  />
+                <label for="authority2">管理员登录</label>
+            </div>
+            <div class="center">
+                <input type="submit" class="btn" value="确定">
+                <input type="reset" class="btn" value="重置">
+            </div>
+        </form>
+    </div>
+</div>

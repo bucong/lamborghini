@@ -1,0 +1,2 @@
+打开Wamp服务器
+http://localhost/lamborghini/www/index.html
